@@ -1,0 +1,29 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "WeatherApp for the odin project. It will utilise openWeather API on it's free plan and potentially the giphy API for custom gifs related to the weather. I also plan to use promises and async/ await a large amount in this project.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZanyAlex/WeatherApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZanyAlex/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/ZanyAlex/WeatherApp#readme",
+  "devDependencies": {
+    "css-loader": "^6.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
