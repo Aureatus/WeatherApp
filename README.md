@@ -5,6 +5,8 @@ WeatherApp for the odin project. It will utilise openWeather API on it's free pl
 ## PLAN
 
 1. Set up base project using webpack, ESlint, prettier, and normalize CSS.
+    - Make sure that the webpack has error handling set up properly, and that it is set up properly to detect the stylesheet.
+    - Ensure .gitignore is updated to include the dist directory.
 
 2. Write functions that hit the openWeather API. The functions for weather will need to take a location as an input and return the weather data for that location. Console.log() the data to make sure they all work properly.
 
