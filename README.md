@@ -11,3 +11,5 @@ WeatherApp for the odin project. It will utilise openWeather API on it's free pl
 3. Write functions to process the JSON data that is recieved from the openWeather API and return only the data that is needed for the weather app.
 
 4. Set up a form to allow users to input location, then fetch the weather info for what they've inputted. 
+
+5. Display the weather data onto the webpage.
