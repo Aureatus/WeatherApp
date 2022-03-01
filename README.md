@@ -13,6 +13,8 @@ WeatherApp for the odin project. It will utilise openWeather API on it's free pl
     - Have these functions contained in a module exclusively for API hitting.
 
 3. Write functions to process the JSON data that is recieved from the openWeather API and return only the data that is needed for the weather app.
+    - Again, refer to the practiceProject created during the API lesson.
+    - Also have these functions contained in their own module, for processing the API data.
 
 4. Set up a form to allow users to input location, then fetch the weather info for what they've inputted. 
 
