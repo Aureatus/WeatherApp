@@ -9,6 +9,8 @@ WeatherApp for the odin project. It will utilise openWeather API on it's free pl
     - Ensure .gitignore is updated to include the dist directory.
 
 2. Write functions that hit the openWeather API. The functions for weather will need to take a location as an input and return the weather data for that location. Console.log() the data to make sure they all work properly.
+    - Refer to the practiceProject created during the API lesson.
+    - Have these functions contained in a module exclusively for API hitting.
 
 3. Write functions to process the JSON data that is recieved from the openWeather API and return only the data that is needed for the weather app.
 
