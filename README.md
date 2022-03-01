@@ -13,3 +13,5 @@ WeatherApp for the odin project. It will utilise openWeather API on it's free pl
 4. Set up a form to allow users to input location, then fetch the weather info for what they've inputted. 
 
 5. Display the weather data onto the webpage.
+
+6. Style the page.
