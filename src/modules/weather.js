@@ -1,45 +1,39 @@
-/* export default async function weatherHit(location, unitState) {
-  try {
-    const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=${unitState}&APPID=18e25686555e1cb7c85bd078129127c3`,
-      { mode: "cors" }
-    );
-    const weatherData = await response.json();
-    return weatherData;
-  } catch (err) {
-    return err;
-  }
-}
+const weatherFunctions = () => {
+  const weatherHit = async (location, unitState) => {
+    try {
+      const response = await fetch(
+        `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=${unitState}&APPID=18e25686555e1cb7c85bd078129127c3`,
+        { mode: "cors" }
+      );
+      const weatherData = await response.json();
+      return weatherData;
+    } catch (err) {
+      return err;
+    }
+  };
 
-import weatherHit from "./weatherHit";
+  const filterWeather = async (location, unitState) => {
+    try {
+      const weatherData = await weatherHit(location, unitState);
+      console.log(weatherData);
+      const filteredWeatherData = {};
+      filteredWeatherData.temp = weatherData.main.temp;
+      filteredWeatherData.tempFeel = weatherData.main.feels_like;
+      filteredWeatherData.humidity = weatherData.main.humidity;
+      filteredWeatherData.windSpeed = weatherData.wind.speed;
+      filteredWeatherData.weatherState = weatherData.weather[0].main;
+      filteredWeatherData.weatherDescription =
+        weatherData.weather[0].description;
+      return filteredWeatherData;
+    } catch (err) {
+      return err;
+    }
+  };
 
-async function filterWeather(location, unitState) {
-  try {
-    const weatherData = await weatherHit(location, unitState);
-    const filteredWeatherData = {};
-    filteredWeatherData.main = weatherData.main;
-    filteredWeatherData.weather = weatherData.weather;
-    filteredWeatherData.wind = weatherData.wind;
-    return filteredWeatherData;
-  } catch (err) {
-    return err;
-  }
-}
+  return {
+    weatherHit,
+    filterWeather,
+  };
+};
 
-export default filterWeather;
-
-import filterWeather from "./weatherDataFiltration";
-
-async function getState() {
-  try {
-    const filteredWeatherData = await filterWeather("London", "metric");
-    return filteredWeatherData.weather[0].main;
-  } catch (err) {
-    return err;
-  }
-}
-
-const weatherState = getState();
-
-export default weatherState;
-*/
+export default weatherFunctions;
