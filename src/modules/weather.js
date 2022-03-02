@@ -23,6 +23,7 @@ const weatherFunctions = () => {
       filteredWeatherData.weatherState = weatherData.weather[0].main;
       filteredWeatherData.weatherDescription =
         weatherData.weather[0].description;
+      filteredWeatherData.weatherIcon = weatherData.weather[0].icon;
       return filteredWeatherData;
     } catch (err) {
       return err;
