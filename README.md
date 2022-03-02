@@ -16,8 +16,12 @@ WeatherApp for the odin project. It will utilise openWeather API on it's free pl
     - Again, refer to the practiceProject created during the API lesson.
     - Also have these functions contained in their own module, for processing the API data.
 
-4. Set up a form to allow users to input location, then fetch the weather info for what they've inputted. 
+4. Create a module that contains the weatherState. 
 
-5. Display the weather data onto the webpage.
+5. Create module that fetches a gif via the Giphy API, using the weatherState as the search term.
 
-6. Style the page.
+6. Set up a form to allow users to input location, then fetch the weather info for what they've inputted. 
+
+7. Display the weather data onto the webpage.
+
+8. Style the page.
