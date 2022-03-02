@@ -15,7 +15,6 @@ const weatherFunctions = () => {
   const filterWeather = async (location, unitState) => {
     try {
       const weatherData = await weatherHit(location, unitState);
-      console.log(weatherData);
       const filteredWeatherData = {};
       filteredWeatherData.temp = weatherData.main.temp;
       filteredWeatherData.tempFeel = weatherData.main.feels_like;
@@ -36,4 +35,7 @@ const weatherFunctions = () => {
   };
 };
 
-export default weatherFunctions;
+const returnRequiredWeatherData = (currentLocation, currentUnit) =>
+  weatherFunctions().filterWeather(currentLocation, currentUnit);
+
+export default returnRequiredWeatherData;
