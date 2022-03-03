@@ -13,12 +13,14 @@ body {
 }
 
 h1,
-p {
+p,
+span {
   margin: 0;
+  width: 100%;
 }
 
 .container {
-  height: 50%;
+  height: 70%;
   width: 50%;
 
   display: grid;
@@ -52,7 +54,7 @@ form {
 
 .weather-info {
   display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr 1fr 6fr / 1fr 1fr;
 
   justify-items: center;
   width: 100%;
@@ -64,6 +66,10 @@ form {
 
   display: grid;
   grid-template: 1fr / 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  width: 100%;
 }
 
 .temp {
@@ -72,6 +78,10 @@ form {
 
   display: grid;
   grid-template: 1fr / 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  width: 100%;
 }
 
 .humidity {
@@ -80,6 +90,14 @@ form {
 
   display: grid;
   grid-template: 1fr / 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+.humidity p {
+  text-align: center;
 }
 
 .windspeed {
@@ -88,19 +106,38 @@ form {
 
   display: grid;
   grid-template: 1fr / 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  width: 100%;
 }
 
 .weather-gif {
   grid-column: 1 / span 2;
-  grid-row: 3 span 1;
+  grid-row: 3 / span 1;
+
+  width: auto;
+  height: min-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .accurate-temp {
   display: grid;
   grid-template: 1fr / 1fr 1fr;
+
+  width: 100%;
 }
 
 .temp-feel {
   display: grid;
   grid-template: 1fr / 1fr 1fr;
+  width: 100%;
+}
+
+.weather-gif img {
+  max-height: 80%;
+  max-width: 100%;
 }
