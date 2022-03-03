@@ -17,26 +17,38 @@ const domFunctions = async () => {
     element.textContent = text;
   };
 
-  const DOMbuild = (weatherData, gifUrl) => {
+  const DOMbuild = (weatherData, gifUrl, currentUnit) => {
+    let tempUnit;
+    let speedUnit;
+    if (currentUnit === "metric") {
+      tempUnit = "\u2103";
+      speedUnit = "km/h";
+    }
+
+    if (currentUnit === "imperial") {
+      tempUnit = "\u2109";
+      speedUnit = "mph";
+    }
+
     changeTextValue(
       weatherElements.description.querySelector("p"),
       weatherData.weatherDescription
     );
     changeTextValue(
       weatherElements.accTemperature.querySelector("p"),
-      weatherData.temp
+      weatherData.temp + tempUnit
     );
     changeTextValue(
       weatherElements.feelTemperature.querySelector("p"),
-      weatherData.tempFeel
+      weatherData.tempFeel + tempUnit
     );
     changeTextValue(
       weatherElements.humidity.querySelector("p"),
-      weatherData.humidity
+      `${weatherData.humidity}%`
     );
     changeTextValue(
       weatherElements.windSpeed.querySelector("p"),
-      weatherData.windSpeed
+      weatherData.windSpeed + speedUnit
     );
     weatherElements.description.querySelector(
       "img"
