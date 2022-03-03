@@ -1,0 +1,106 @@
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.container {
+  height: 50%;
+  width: 50%;
+
+  display: grid;
+  grid-template: 3fr 1fr 8fr/ 1fr;
+  grid-template-areas:
+    "header"
+    "search-form"
+    "weather-info";
+
+  align-items: center;
+  justify-items: center;
+}
+
+.header {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+
+  align-items: center;
+  justify-items: center;
+}
+
+form {
+  height: auto;
+  width: 100%;
+}
+
+.city-search {
+  padding: 0;
+  width: 100%;
+}
+
+.weather-info {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+
+  justify-items: center;
+  width: 100%;
+}
+
+.weather-description {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+}
+
+.temp {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+}
+
+.humidity {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+}
+
+.windspeed {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+}
+
+.weather-gif {
+  grid-column: 1 / span 2;
+  grid-row: 3 span 1;
+}
+
+.accurate-temp {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+}
+
+.temp-feel {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+}
