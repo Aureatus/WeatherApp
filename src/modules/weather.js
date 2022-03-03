@@ -5,9 +5,14 @@ const weatherFunctions = () => {
         `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=${unitState}&APPID=18e25686555e1cb7c85bd078129127c3`,
         { mode: "cors" }
       );
+
       const weatherData = await response.json();
+      if (!response.ok) {
+        throw new Error(weatherData.message);
+      }
       return weatherData;
     } catch (err) {
+      alert(err);
       return err;
     }
   };
@@ -15,6 +20,10 @@ const weatherFunctions = () => {
   const filterWeather = async (location, unitState) => {
     try {
       const weatherData = await weatherHit(location, unitState);
+      if (weatherData instanceof Error) {
+        throw new Error(weatherData.message);
+      }
+
       const filteredWeatherData = {};
       filteredWeatherData.temp = weatherData.main.temp;
       filteredWeatherData.tempFeel = weatherData.main.feels_like;
@@ -36,7 +45,16 @@ const weatherFunctions = () => {
   };
 };
 
-const returnRequiredWeatherData = (currentLocation, currentUnit) =>
-  weatherFunctions().filterWeather(currentLocation, currentUnit);
+const returnRequiredWeatherData = async (currentLocation, currentUnit) => {
+  try {
+    const data = weatherFunctions().filterWeather(currentLocation, currentUnit);
+    if (data instanceof Error) {
+      throw new Error(data.message);
+    }
+    return data;
+  } catch (err) {
+    return err;
+  }
+};
 
 export default returnRequiredWeatherData;

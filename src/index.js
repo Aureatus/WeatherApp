@@ -4,7 +4,8 @@ import requiredWeatherData from "./modules/weather";
 import searchGifs from "./modules/giphy";
 import domFunctions from "./modules/DOM";
 
-let currentLocation = "Mali";
+let currentLocation;
+let pastLocation;
 let currentUnit = "metric";
 
 const form = document.forms[0];
@@ -37,8 +38,13 @@ const searchBar = document.querySelector(".city-search");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
+  pastLocation = currentLocation;
   currentLocation = searchBar.value;
   const weatherData = await requiredWeatherData(currentLocation, currentUnit);
+  if (weatherData instanceof Error) {
+    currentLocation = pastLocation;
+    return;
+  }
   const gifUrl = await searchGifs(weatherData.weatherState);
   (await domFunctions()).DOMbuild(weatherData, gifUrl, currentUnit);
 });
