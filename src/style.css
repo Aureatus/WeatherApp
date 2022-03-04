@@ -122,6 +122,8 @@ form {
 .weather-gif {
   grid-area: weather-gif;
 
+  justify-self: center;
+
   max-height: calc(10vw + 12vh);
 }
 
