@@ -15,11 +15,6 @@ span {
   margin: 0;
 }
 
-h1 {
-  color: #3d3b30;
-  font-size: 3rem;
-}
-
 p {
   /*text-shadow: 0.5px 0.5px black;*/
 }
@@ -40,6 +35,23 @@ p {
 
 .header {
   grid-area: header;
+
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+}
+
+.header h1 {
+  color: #3d3b30;
+  font-size: calc(1rem + 5vw);
+  color: #3d3b30;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 3px 3px #3fa34d;
+  text-shadow: 1.5px 1.5px #e7e247;
+}
+
+.header .unit-buttons {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
 }
 
 form {
@@ -136,12 +148,4 @@ form {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.2rem;
   color: #3d3b30;
-}
-
-.header h1 {
-  color: #3d3b30;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 4rem;
-  text-shadow: 3px 3px #3fa34d;
-  text-shadow: 1.5px 1.5px #e7e247;
 }
