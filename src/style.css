@@ -172,6 +172,13 @@ form {
   background-color: #3fa34d;
   border: 2px solid #3fa34d;
   border-radius: 10px;
+
+  display: grid;
+  justify-items: center;
+}
+
+.windspeed span {
+  align-self: center;
 }
 
 .windspeed p {
