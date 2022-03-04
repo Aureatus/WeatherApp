@@ -210,7 +210,7 @@ form {
 
   justify-self: center;
 
-  max-height: calc(9vw + 11vh);
+  max-height: calc(6vw + 11vh);
 }
 
 .weather-gif img {
