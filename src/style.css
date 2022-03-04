@@ -15,10 +15,6 @@ span {
   margin: 0;
 }
 
-p {
-  /*text-shadow: 0.5px 0.5px black;*/
-}
-
 .container {
   background-color: #e9edde;
 
@@ -158,9 +154,13 @@ form {
   background-color: #e7e247;
   border: 2px solid #e7e247;
   border-radius: 10px;
+
+  display: grid;
+  justify-items: center;
 }
 
 .humidity span {
+  align-self: center;
 }
 
 .humidity p {
