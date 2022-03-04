@@ -193,6 +193,7 @@ form {
 
 .windspeed span {
   align-self: center;
+  text-align: center;
 }
 
 .windspeed p {
