@@ -108,13 +108,15 @@ form {
 
 .weather-info {
   grid-area: weather-info;
-
   display: grid;
   grid-template: 1fr 1fr 1fr / 1fr 1fr;
   grid-template-areas:
     "weather-description temp"
     "humidity windspeed"
     "weather-gif weather-gif";
+
+  row-gap: 1vh;
+  column-gap: 1vh;
 }
 
 .weather-description {
@@ -126,6 +128,8 @@ form {
 
   display: grid;
   justify-items: center;
+
+  margin-left: 2%;
 }
 
 .weather-description p {
@@ -140,6 +144,8 @@ form {
   border-radius: 10px;
 
   display: grid;
+
+  margin-right: 2%;
 }
 
 .accurate-temp {
@@ -161,6 +167,8 @@ form {
 
   display: grid;
   justify-items: center;
+
+  margin-left: 2%;
 }
 
 .humidity span {
@@ -179,6 +187,8 @@ form {
 
   display: grid;
   justify-items: center;
+
+  margin-right: 2%;
 }
 
 .windspeed span {
