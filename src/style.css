@@ -138,6 +138,18 @@ form {
   background-color: #ba1200;
   border: 2px solid #ba1200;
   border-radius: 10px;
+
+  display: grid;
+}
+
+.accurate-temp {
+  display: grid;
+  justify-items: center;
+}
+
+.temp-feel {
+  display: grid;
+  justify-items: center;
 }
 
 .humidity {
@@ -171,12 +183,6 @@ form {
   justify-self: center;
 
   max-height: calc(10vw + 12vh);
-}
-
-.accurate-temp {
-}
-
-.temp-feel {
 }
 
 .weather-gif img {
