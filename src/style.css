@@ -43,7 +43,6 @@ p {
 .header h1 {
   color: #3d3b30;
   font-size: calc(1rem + 5vw);
-  color: #3d3b30;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-shadow: 3px 3px #3fa34d;
   text-shadow: 1.5px 1.5px #e7e247;
@@ -51,7 +50,35 @@ p {
 
 .header .unit-buttons {
   display: grid;
-  grid-template: 1fr / 1fr 1fr;
+  grid-template: 1fr 1fr / 1fr;
+
+  justify-items: center;
+  align-items: center;
+}
+
+.header .unit-buttons button {
+  width: 50%;
+  height: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: calc(0.8rem + 2vw);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+
+  color: #e9edde;
+  background-color: #3d3b30;
+
+  padding: 0;
+  border: 2px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.header .unit-buttons button:active {
+  background-color: #3fa34d;
 }
 
 form {
