@@ -123,9 +123,13 @@ form {
   background-color: #5c80bc;
   border: 2px solid #5c80bc;
   border-radius: 10px;
+
+  display: grid;
+  justify-items: center;
 }
 
 .weather-description p {
+  align-self: center;
 }
 
 .temp {
