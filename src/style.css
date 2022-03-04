@@ -66,9 +66,18 @@ form {
 
 .weather-info {
   grid-area: weather-info;
+
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  grid-template-areas:
+    "weather-description temp"
+    "humidity windspeed"
+    "weather-gif weather-gif";
 }
 
 .weather-description {
+  grid-area: weather-description;
+
   background-color: #5c80bc;
   border: 2px solid #5c80bc;
   border-radius: 10px;
@@ -78,12 +87,16 @@ form {
 }
 
 .temp {
+  grid-area: temp;
+
   background-color: #ba1200;
   border: 2px solid #ba1200;
   border-radius: 10px;
 }
 
 .humidity {
+  grid-area: humidity;
+
   background-color: #e7e247;
   border: 2px solid #e7e247;
   border-radius: 10px;
@@ -96,6 +109,8 @@ form {
 }
 
 .windspeed {
+  grid-area: windspeed;
+
   background-color: #3fa34d;
   border: 2px solid #3fa34d;
   border-radius: 10px;
@@ -105,6 +120,9 @@ form {
 }
 
 .weather-gif {
+  grid-area: weather-gif;
+
+  max-height: calc(10vw + 12vh);
 }
 
 .accurate-temp {
@@ -114,7 +132,8 @@ form {
 }
 
 .weather-gif img {
-  max-height: 200px;
+  height: 100%;
+  width: auto;
 }
 
 .weather-description p,
