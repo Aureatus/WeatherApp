@@ -56,6 +56,9 @@ p {
 
 form {
   grid-area: search-form;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .city-search {
