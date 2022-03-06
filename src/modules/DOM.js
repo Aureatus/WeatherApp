@@ -1,6 +1,7 @@
 const domFunctions = () => {
   const container = document.querySelector(".container");
   const weatherElementContainer = container.querySelector(".weather-info");
+  // Object with DOM references as the values to keynames that line up with weatherData.
   const weatherElements = {
     weatherDescription: weatherElementContainer.querySelector(
       ".weather-description"
@@ -20,6 +21,7 @@ const domFunctions = () => {
   };
 
   const DOMbuild = (weatherData, gifUrl, currentUnit) => {
+    // Inserts weatherData into their respective elements.
     let tempUnit;
     let speedUnit;
     if (currentUnit === "metric") {

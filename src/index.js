@@ -12,6 +12,8 @@ const searchBar = document.querySelector(".city-search");
 
 document.querySelector(".lds-ring").style.visibility = "hidden";
 
+// Initial weather load and render
+
 (async () => {
   currentLocation = "London";
   document.querySelector(
@@ -49,6 +51,8 @@ document.querySelector(".lds-ring").style.visibility = "hidden";
     }
   });
 })();
+
+// weather load and re-render whenever search bar input is submitted.
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();

@@ -18,6 +18,7 @@ const weatherFunctions = () => {
   };
 
   const filterWeather = async (input) => {
+    // Filters out data I need into a separate variable.
     const weatherData = await input;
     try {
       if (weatherData instanceof Error) {
@@ -40,6 +41,7 @@ const weatherFunctions = () => {
   };
 
   const returnRequiredWeatherData = async (currentLocation, currentUnit) => {
+    // Pulls weather data and filters it.
     try {
       const data = weatherFunctions().filterWeather(
         weatherHit(currentLocation, currentUnit)

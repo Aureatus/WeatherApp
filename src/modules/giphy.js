@@ -1,3 +1,5 @@
+// Fetch gif with weatherState as the search argument.
+
 export default async function searchGifs(weatherState) {
   try {
     const response = await fetch(
