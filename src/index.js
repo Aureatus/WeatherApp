@@ -25,6 +25,8 @@ document.querySelector(".lds-ring").style.visibility = "hidden";
   const metricButton = document.querySelector(".metric");
   const imperialButton = document.querySelector(".imperial");
 
+  metricButton.style.backgroundColor = "palegreen";
+
   metricButton.addEventListener("click", async () => {
     if (currentUnit === "imperial") {
       currentUnit = "metric";
