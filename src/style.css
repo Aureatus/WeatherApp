@@ -181,9 +181,6 @@ form {
   align-self: center;
 }
 
-.humidity p {
-}
-
 .windspeed {
   grid-area: windspeed;
 
@@ -200,9 +197,6 @@ form {
 .windspeed span {
   align-self: center;
   text-align: center;
-}
-
-.windspeed p {
 }
 
 .weather-gif {
