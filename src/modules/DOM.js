@@ -1,4 +1,4 @@
-const domFunctions = async () => {
+const domFunctions = () => {
   const container = document.querySelector(".container");
   const weatherElementContainer = container.querySelector(".weather-info");
   const weatherElements = {
