@@ -17,9 +17,9 @@ const weatherFunctions = () => {
     }
   };
 
-  const filterWeather = async (location, unitState) => {
+  const filterWeather = async (input) => {
+    const weatherData = await input;
     try {
-      const weatherData = await weatherHit(location, unitState);
       if (weatherData instanceof Error) {
         throw new Error(weatherData.message);
       }
@@ -39,22 +39,25 @@ const weatherFunctions = () => {
     }
   };
 
+  const returnRequiredWeatherData = async (currentLocation, currentUnit) => {
+    try {
+      const data = weatherFunctions().filterWeather(
+        weatherHit(currentLocation, currentUnit)
+      );
+      if (data instanceof Error) {
+        throw new Error(data.message);
+      }
+      return data;
+    } catch (err) {
+      return err;
+    }
+  };
+
   return {
     weatherHit,
     filterWeather,
+    returnRequiredWeatherData,
   };
 };
 
-const returnRequiredWeatherData = async (currentLocation, currentUnit) => {
-  try {
-    const data = weatherFunctions().filterWeather(currentLocation, currentUnit);
-    if (data instanceof Error) {
-      throw new Error(data.message);
-    }
-    return data;
-  } catch (err) {
-    return err;
-  }
-};
-
-export default returnRequiredWeatherData;
+export default weatherFunctions().returnRequiredWeatherData;
