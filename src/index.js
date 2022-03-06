@@ -5,7 +5,6 @@ import searchGifs from "./modules/giphy";
 import domFunctions from "./modules/DOM";
 
 let currentLocation;
-let pastLocation;
 let currentUnit = "metric";
 
 const form = document.forms[0];
@@ -53,17 +52,15 @@ document.querySelector(".lds-ring").style.visibility = "hidden";
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  pastLocation = currentLocation;
-  currentLocation = searchBar.value;
   document.querySelector(".lds-ring").style.visibility = "visible";
   document.querySelector(".container").style.opacity = "0.1";
-  const weatherData = await requiredWeatherData(currentLocation, currentUnit);
+  const weatherData = await requiredWeatherData(searchBar.value, currentUnit);
   if (weatherData instanceof Error) {
-    currentLocation = pastLocation;
     document.querySelector(".lds-ring").style.visibility = "hidden";
     document.querySelector(".container").style.opacity = "1";
     return;
   }
+  currentLocation = searchBar.value;
   const gifUrl = await searchGifs(weatherData.weatherState);
   (await domFunctions()).DOMbuild(weatherData, gifUrl, currentUnit);
   document.querySelector(
