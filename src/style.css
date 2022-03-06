@@ -11,6 +11,7 @@ body {
 }
 
 h1,
+h2,
 p,
 span {
   margin: 0;
@@ -36,7 +37,7 @@ span {
   grid-area: header;
 
   display: grid;
-  grid-template: 1fr / 1fr 1fr;
+  grid-template: 1fr / 1fr 1fr 1fr;
 }
 
 .header h1 {
@@ -46,6 +47,15 @@ span {
   text-shadow: 3px 3px #3fa34d;
   text-shadow: 1.5px 1.5px #e7e247;
   margin-left: 2%;
+}
+
+.header h2 {
+  color: coral;
+  font-size: calc(0.1rem + 4vw);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 2px 2px #3d3b30;
+  padding-left: 25%;
+  align-self: center;
 }
 
 .header .unit-buttons {
@@ -64,7 +74,7 @@ span {
   justify-content: center;
   align-items: center;
 
-  font-size: calc(0.8rem + 2vw);
+  font-size: calc(0.2rem + 2vw);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
 

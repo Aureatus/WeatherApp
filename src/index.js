@@ -15,6 +15,9 @@ document.querySelector(".lds-ring").style.visibility = "hidden";
 
 (async () => {
   currentLocation = "London";
+  document.querySelector(
+    ".current-location"
+  ).textContent = `Current location: ${currentLocation} `;
   document.querySelector(".lds-ring").style.visibility = "visible";
   document.querySelector(".container").style.opacity = "0.1";
   let weatherData = await requiredWeatherData(currentLocation, currentUnit);
@@ -63,6 +66,9 @@ form.addEventListener("submit", async (event) => {
   }
   const gifUrl = await searchGifs(weatherData.weatherState);
   (await domFunctions()).DOMbuild(weatherData, gifUrl, currentUnit);
+  document.querySelector(
+    ".current-location"
+  ).textContent = `Current location: ${currentLocation} `;
   document.querySelector(".lds-ring").style.visibility = "hidden";
   document.querySelector(".container").style.opacity = "1";
 });
